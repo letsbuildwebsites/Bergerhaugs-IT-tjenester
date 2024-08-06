@@ -1,0 +1,393 @@
+/* Stilen for hele siden */
+html, body {
+  margin: 0; /* Fjerner marginen rundt siden */
+  padding: 0; /* Fjerner padding rundt siden */
+  width: 100%; /* Setter bredden til 100% av skjermen */
+  height: 100%; /* Setter høyden til 100% av skjermen */
+  background-color: #212025; /* Setter bakgrunnsfargen til mørkegrå */
+}
+
+/* Meny-stilen */
+#meny {
+  position: fixed; /* Fikser menyen til toppen av skjermen */
+  top: 0%; /* Plasserer menyen på toppen av skjermen */
+  left: 0%; /* Plasserer menyen på venstre side av skjermen */
+  width: 100%; /* Setter menyens bredde til full skjerm */
+  background-color: transparent; /* Setter menyens bakgrunn til gjennomsiktig */
+  padding: 10px; /* Legger til litt padding for å gjøre menyen mer leselig */
+  display: flex; /* Gjør menyen til en flex-container */
+    justify-content: center;
+    background-color: #212025;
+  z-index: 10;
+}
+
+#meny ul {
+  list-style: none; /* Fjerner punktene fra meny-elementene */
+  margin: 0; /* Fjerner margen fra meny-elementene */
+    padding: 10px;
+
+  display: inline-block; /* Gjør meny-elementene til inline-block-elementer */
+}
+
+#meny button {
+  background: none; /* Fjerner standard knapp bakgrunn */
+    font-size: medium;
+  border: none; /* Fjerner standard knapp ramme */
+  color: #fff; /* Setter tekstfargen til hvit */
+  text-decoration: none; /* Fjerner tekstdekoren fra meny-elementene */
+  padding: 10px; /* Legger til litt padding for å gjøre meny-elementene mer leselige */
+    border-radius: 30px;
+  cursor: pointer; /* Endrer musepekeren til en hånd når man er over knappene */
+}
+
+#meny button:hover {
+  border: 2px solid #00ff00; /* Setter en lysegrønn ramme rundt knappen ved hover */
+  color: #00ff00; /* Endrer tekstfargen til lysegrønn ved hover */
+    padding: 8px;
+      transform: scale(1.2); /* Øker størrelsen på boksen ved hover */
+  transition: transform 0.5s, color 0.5s; /* Legger til en overgangseffekt for skalering og fargeendring */
+}
+
+
+/* Stil for toppTekst og h1 */
+#toppTekst {
+    position: relative;
+    top: 20%;
+    left: 5%;
+    color: #ffffff;
+    z-index: 2;
+}
+
+#toppTekst h1 {
+    width: 60%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Legger til skygge bak teksten */
+}
+
+
+/* Stil for knappene i toppTekst */
+#toppTekst button {
+    background-color: #555; /* Bakgrunnsfarge for knappene når de ikke blir hovret over */
+    color: #fff; /* Setter tekstfargen til hvit */
+    text-decoration: none; /* Fjerner tekstdekoren fra knappene */
+    padding: 10px; /* Legger til litt padding for å gjøre knappene mer leselige */
+    cursor: pointer; /* Endrer musepekeren til en hånd når man er over knappene */
+    border-radius: 20px; /* Gjør knappene avrundede */
+    margin: 5px; /* Legger til litt margin mellom knappene */
+    font-size: medium;
+    border: 2px solid #212025;
+}
+
+#toppTekst button:hover {
+    border: 2px solid #00ff00; /* Setter en lysegrønn ramme rundt knappen ved hover */
+    color: #00ff00; /* Endrer tekstfargen til lysegrønn ved hover */
+  transform: scale(1.2); /* Øker størrelsen på boksen ved hover */
+  transition: transform 0.5s, color 0.5s; /* Legger til en overgangseffekt for skalering og fargeendring */
+}
+
+/* Stil for bilde */
+#bilde1 {
+    z-index: 0;
+    position: relative;
+    top: -90px;
+}
+
+#ikoner {
+  display: flex; /* Gjør #ikoner til en flex-container */
+  justify-content: space-between; /* Fordeler ikonene jevnt på linje */
+  padding: 20px; /* Legger til litt padding for å gjøre ikonene mer leselige */
+  position: absolute;
+  top: 110%;
+  background-color: #212025; /* Endret bakgrunnsfargen til mørkegrå */
+}
+
+.ikon {
+  display: flex; /* Gjør hver .ikon til en flex-container */
+  flex-direction: column; /* Gjør ikonene til en kolonne */
+  align-items: center; /* Plasserer ikonene i midten */
+  padding: 20px; /* Legger til litt padding for å gjøre ikonene mer leselige */
+  background-color: #2e2e33; /* Setter bakgrunnsfargen til mørk grå */
+  border: 2px solid #ddd; /* Setter en lys grå border rundt ikonene */
+  border-radius: 25px; /* Runder av hjørnene på ikonene */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Legger til en skygge under ikonene */
+  color: white; /* Endrer tekstfargen til hvit */
+  opacity: 0; /* Setter opacity til 0 for å gjøre ikonene usynlige */
+  transform: translateX(-100px); /* Flytter ikonene 100px til venstre */
+  transition: opacity 1.5s, transform 1.5s; /* Legger til en transition-effekt */
+}
+
+.ikon.animate-in {
+  opacity: 1; /* Setter opacity til 1 for å gjøre ikonene synlige */
+  transform: translateX(0); /* Flytter ikonene tilbake til original posisjon */
+}
+
+.ikon img {
+  width: 100px; /* Setter bredde på ikon-bildene */
+  height: 100px; /* Setter høyde på ikon-bildene */
+  margin-bottom: 10px; /* Legger til litt margin under ikon-bildene */
+}
+
+.ikon h4 {
+  font-size: 26px; /* Setter font-størrelse på ikon-overskriftene */
+  margin-bottom: 10px; /* Legger til litt margin under ikon-overskriftene */
+}
+
+.ikon p {
+  font-size: 16px; /* Setter font-størrelse på ikon-teksten */
+  margin-bottom: 20px; /* Legger til litt margin under ikon-teksten */
+    text-align: center;
+}
+
+
+.ikon:hover {
+  color: #00ff00; /* Endrer tekstfargen til lysegrønn ved hover */
+  transform: scale(1.1); /* Øker størrelsen på boksen ved hover */
+  transition: transform 0.3s, color 0.3s; /* Legger til en overgangseffekt for skalering og fargeendring */
+}
+
+
+.ikon {
+  /* ... andre styles ... */
+  opacity: 0; /* Setter opacity til 0 for å gjøre ikonene usynlige */
+  transform: translateX(-100px); /* Flytter ikonene 100px til venstre */
+  transition: opacity 1.5s, transform 1.5s; /* Legger til en transition-effekt */
+}
+
+
+
+#to {
+    position: absolute;
+    top: 101%;
+}
+
+/*  Reklame, 100% fornøyd garanti  */
+#reklame {
+  background-color: #212025; /* Endret bakgrunnsfargen til mørkegrå */
+  position: absolute;
+  top: 145%;
+  width: 80%;
+  left: 5%;
+  padding: 3%;
+  opacity: 0;
+  transform: translateX(100%) rotate(90deg) scale(0.5);
+  transition: opacity 1.5s, transform 1.5s; /* Legger til en transition-effekt */
+  color: white; /* Endrer tekstfargen til hvit */
+}
+
+#reklame > p {
+  width: 40%;
+}
+
+#video {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+}
+
+#reklame:hover {
+  color: #00ff00; /* Endrer tekstfargen til lysegrønn ved hover */
+}
+
+#reklame {
+    border-top: 5px solid #000000;
+  background-color: #212025; /* Endret bakgrunnsfargen til mørkegrå */
+  position: absolute;
+  top: 160%;
+  width: 90%;
+  left: 5%;
+  padding: 3%;
+  color: white; /* Endrer tekstfargen til hvit */
+}
+
+#reklame h3 {
+  color: #00ff00; 
+}
+
+#reklame p {
+  color: white; /* Endrer tekstfargen på paragrafen til hvit */
+}
+
+
+#tre {
+    position: absolute;
+    top: 200%;
+}
+
+
+/*  Om oss  */
+#omOss {
+  position: absolute;
+  top: 200%;
+  width: 90%;
+  justify-content: center;
+  padding: 5%;
+  background-color: #212025; /* Endret bakgrunnsfargen til mørkegrå */
+  color: white; /* Endret tekstfargen til hvit */
+  opacity: 0;
+  transition: opacity 3.4s; /* Add transition effect */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Sentraliserer teksten */
+  border-radius: 10px;
+}
+
+#omOss h2 {
+  color: #00ff00; 
+  margin-bottom: 20px;
+}
+
+#omOss img {
+  width: 50%; /* Endret bredden på bildet til 50% */
+  height: auto; /* Bevarer bildeforholdet */
+  margin-bottom: 20px;
+  border-radius: 10px; /* Gjør hjørnene på bildet runde */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Legger til en skygge under bildet */
+}
+
+#omOss p {
+  color: white; /* Endret tekstfargen til hvit */
+  margin-bottom: 20px;
+  width: 80%; /* Begrens bredden på paragrafene */
+}
+
+#omOss button {
+  background-color: #00ff00; /* Endret bakgrunnsfargen på knappen til lysegrønn */
+  color: #212025; /* Endret tekstfargen på knappen til mørkegrå */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+    border-radius: 15px;
+}
+
+#omOss button:hover {
+  transform: scale(1.5); /* Øker størrelsen på boksen ved hover */
+  transition: transform 1s, color 1s; /* Legger til en overgangseffekt for skalering og fargeendring */
+}
+
+
+
+#fire {
+    position: absolute;
+    top: 278%;
+}
+
+
+/*  Tilbud  */
+#tilbud {
+  position: absolute;
+  top: 310%;
+  width: 90%;
+  justify-content: center;
+  padding: 5%;
+  background-color: #212025; /* Endret bakgrunnsfargen til mørkegrå */
+  color: white; /* Endret tekstfargen til hvit */
+  opacity: 0;
+  transform: scale(0.01);
+  transition: opacity 4s, transform 4s;   
+  display: flex;
+  flex-direction: row; /* Bruker radlayout for bilde og tekst */
+  align-items: center;
+  border-radius: 10px;
+  gap: 20px;  /* Legger til mellomrom mellom bilde og tekst */
+}
+
+#tilbud h2 {
+  color: #00ff00; 
+  margin-bottom: 20px;
+}
+
+#tilbud img {
+  width: 30%; /* Endret bredden på bildet til 30% */
+    margin-left: 200px;
+  height: auto; /* Bevarer bildeforholdet */
+  border-radius: 10px; /* Gjør hjørnene på bildet runde */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Legger til en skygge under bildet */
+}
+
+#tilbud p, #tilbud ul {
+  width: 60%; /* Begrens bredden på teksten og listen */
+  margin-bottom: 20px;
+  text-align: left; /* Venstrejusterer teksten */
+}
+
+#tilbud ul {
+  list-style-type: none; /* Fjerner standard listepunkt */
+  padding-left: 0; /* Fjerner standard innrykk */
+}
+
+#tilbud ul:hover {
+  color: #00ff00; /* Endrer tekstfargen til lysegrønn ved hover */
+  transform: scale(1.1); /* Øker størrelsen på boksen ved hover */
+  transition: transform 0.3s, color 0.3s; /* Legger til en overgangseffekt for skalering og fargeendring */
+}
+
+#tilbud ul li {
+  margin-bottom: 10px;
+  background-color: #2e2e33; /* Bakgrunnsfarge for listeelementer */
+  padding: 10px;
+  border-radius: 5px;
+    border: 2px solid #000;
+    border-radius: 15px;
+}
+
+
+
+#fem {
+    position: absolute;
+    top: 360%;
+    border-top: 5px solid #000;
+    width: 100%;
+}
+
+
+
+/*  Kontakt oss  */
+
+#kontaktOss {
+  position: absolute;
+  top: 370%;
+  width: 90%;
+  justify-content: center;
+  padding: 5%;
+  background-color: #212025; /* Endret bakgrunnsfargen til mørkegrå */
+  color: white; /* Endret tekstfargen til hvit */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Sentraliserer teksten */
+}
+
+#kontaktOss h2 {
+  color: #00ff00; 
+  margin-bottom: 20px;
+}
+
+#kontaktOss p {
+  color: white; 
+  margin-bottom: 20px;
+  width: 80%; /* Begrens bredden på paragrafene */
+}
+
+#kontaktOss ul {
+  list-style-type: none; /* Fjerner standard listepunkt */
+  padding-left: 0; /* Fjerner standard innrykk */
+  width: 40%; /* Begrens bredden på listen */
+}
+
+#kontaktOss ul li {
+  margin-bottom: 10px;
+  background-color: #2e2e33; /* Bakgrunnsfarge for listeelementer */
+  padding: 10px;
+  border-radius: 5px;
+  color: #00ff00; /* Endrer tekstfargen til lysegrønn ved hover */
+    border: 2px solid #000;
+}
+
+#kontaktOss ul li:hover {
+  color: #00ff00; /* Endrer tekstfargen til lysegrønn ved hover */
+  transform: scale(1.5); /* Øker størrelsen på boksen ved hover */
+  transition: transform 1s, color 1s; /* Legger til en overgangseffekt for skalering og fargeendring */
+}
+
