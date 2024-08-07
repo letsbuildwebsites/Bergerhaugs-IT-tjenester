@@ -58,9 +58,28 @@ html, body {
     z-index: 2;
 }
 
+/* Stil for toppTekst og h1 */
+#toppTekst {
+  position: relative;
+  top: 20%;
+  left: 5%;
+  color: #ffffff;
+  z-index: 2;
+}
+
 #toppTekst h1 {
-    width: 60%;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Legger til skygge bak teksten */
+  width: 50%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Legger til skygge bak teksten */
+  background: rgba(255, 255, 255, 0.1); /* Legger til en semi-gjennomsiktig hvit bakgrunn */
+  backdrop-filter: blur(10px); /* Gjør bakgrunnen blurry */
+  padding: 10px; /* Legger til litt padding rundt teksten */
+  border-radius: 10px; /* Gjør hjørnene på bakgrunnen runde */
+}
+
+/* Stil for brødteksten */
+body p {
+  font-size: 20px; /* Øker størrelsen på brødteksten */
+  color: #ffffff; /* Setter tekstfargen til hvit */
 }
 
 
@@ -115,6 +134,7 @@ html, body {
   transition: opacity 1.5s, transform 1.5s; /* Legger til en transition-effekt */
 }
 
+
 .ikon.animate-in {
   opacity: 1; /* Setter opacity til 1 for å gjøre ikonene synlige */
   transform: translateX(0); /* Flytter ikonene tilbake til original posisjon */
@@ -132,7 +152,7 @@ html, body {
 }
 
 .ikon p {
-  font-size: 16px; /* Setter font-størrelse på ikon-teksten */
+  font-size: 20px; /* Setter font-størrelse på ikon-teksten */
   margin-bottom: 20px; /* Legger til litt margin under ikon-teksten */
     text-align: center;
 }
