@@ -2,114 +2,78 @@
 <html lang="no">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bergerhaugs IT-tjenester</title>
-    <link rel="stylesheet" href="Stiler/stil.css">
-    <script src="JS/JS.js"></script>
+    <link rel="stylesheet" href="./Stiler/stil.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="./JS/JS.js"></script>
 </head>
 <body>
     <div id="en"></div>
-    
-    
-    
-<!--  Meny start  -->
+
+    <!--  Meny start  -->
+
     <div id="meny">
-        <div class="skjultSider">
-            <ul><button id="hjem1">Hjem</button></ul>
-            <ul><button id="våreMål1">Våre mål</button></ul>
-            <ul><button id="omOss1">Om oss</button></ul>
-            <ul><button id="tilbud1">Tilbud</button></ul>
-            <ul><button id="kontaktOss1">Kontakt oss</button></ul>
-        </div>
+        <ul>
+            <li><h1>Bergerhaugs IT-tjenester</h1></li>
+            <li><a><button id="garanti">Garanti</button></a></li>
+            <li><a><button id="littOmOss">Litt om oss</button></a></li>
+            <li><a><button id="kontakt">Kontakt oss</button></a></li>
+        </ul>
     </div>
-<!--  Meny slutt  -->
-    
+    <!--  Meny slutt  -->
+
+    <!--  Intro start  -->
     <div id="toppTekst">
-        <h1>Bergerhaugs IT-tjenester er en ny bedrift som driver med nettsideutvikling på en profesjonell måte</h1>
-        <button id="knapp1">Hva kan vi gjøre for deg?</button>
-        <button id="knapp2">Kontakt oss</button>
+        <h1>Effektiv og profesjonell webutvikling for små bedrifter som ønsker en fordel</h1>
+        <button id="knapp1">Kontakt oss</button>
     </div>
     <div id="bilde1">
-        <img src="Bilder/forsideBilde.jpg" alt="Datamaskin med masse kode på skjermen" width="100%" height="100%">
+        <img src="./Bilder/pexels-fauxels-3184316.jpg" alt="Flere personer som sitter rundt et bord, to står opp og tar hverandre i hånden" width="100%" height="100%">
     </div>
-    
-    
-    
-    
-<!--  Første 3 ikoner ved siden av hverandre  -->
-    <div id="to"></div>
-    
-    <div id="ikoner">
-        <div class="ikon">
-            <img src="Bilder/tekstboble.png">
-            <h4>Kommunikasjon</h4>
-            <p>Vi jobber hardt for å opprettholde god kommunikasjon med våre kunder. Hele dagen, hver dag, ingen ferier.</p>
-        </div>
-        <div class="ikon">
-            <img src="Bilder/pengerTid.jpg">
-            <h4>Effektivt</h4>
-            <p>Vi er både kostnads- og tidseffektive når det kommer til å gjøre jobben vår for kundene våre.</p>
-        </div>
-        <div class="ikon">
-            <img src="Bilder/tommelOpp.png">
-            <h4>Profesjonelt</h4>
-            <p>Vi er profesjonelle, som alltid leverer det vi har avtalt til avtalt tid. (Ofte både bedre og raskere)</p>
-        </div>
+
+    <div id="trengerdu">
+        <h3>Trenger du en egen nettside til din bedrift?</h3>
+        <p>Vi er en liten og personlig bedrift som hjelper deg med akkurat dette! Det skal ikke være din oppgave som bedriftseier å kunne alt om webutvikling. Vi hjelper deg gjerne med å designe, utvikle og publisere nettsiden din, slik at kundene dine kan se og bruke den.</p>
     </div>
-    
-    
-    
-<!--  Reklamasjon  -->
+    <!--  Intro slutt  -->
+
+    <!--  Reklamasjon -->
     <div id="reklame">
         <h3>100% fornøyd garanti</h3>
-        <p>For oss er hver kunde og oppgave vi får personlig. Det er personlig viktig for oss å gjennomføre, og gjøre kundene våre 100% fornøyde. Derfor vil vi også gi kundene våre 100% fornøyd garanti; er du ikke fornøyd med det vi leverer, så får du full refusjon av oss. Du får også ubegrenset antall ombygginger, så du er sikker på at du får det du vil ha. 100% fornøyd garanti gjelder alle våre tilbud og avtaler. </p>
-        <video id="video" src="Bilder/Video.mp4" width="90%" height="90%" autoplay loop muted>
-            Din nettleser støtter ikke video.
-        </video>
+        <p>For oss er hver kunde og oppgave vi får personlig. Det er viktig for oss å gjennomføre og gjøre kundene våre 100% fornøyde. Derfor tilbyr vi 100% fornøyd-garanti. Hvis du ikke er fornøyd med det vi leverer, får du full refusjon. Vi tilbyr også ubegrenset antall revisjoner slik at du er sikker på at du får det du vil ha.</p>
+        <img src="./Bilder/pexels-fauxels-3184405.jpg" alt="en person på et kontor som står med armene i kryss og smiler" width="100%" height="100%">
     </div>
-    
-    
-    
-<!--  Om oss  -->
+
+    <!--  Om oss  -->
     <div id="tre"></div>
     <div id="omOss">
-      <h2>Om oss</h2>
-      <img src="Bilder/omOssBilde.jpg" alt="Om oss bilde">
-      <p>Vi er en nystartet bedrift som driver med nettsideutvikling. Vi kan utvikle alle slags ulike typer nettsider; akkurat hva kunden vår ønsker. Om dere ønsker en bedrifts-hjemmeside, en nettbutikk eller en blogg, så kan vi hjelpe deg. Vi har en ambisjon og et mål om å gjøre nettsideutvikling på en profesjonell, effektiv og trygg måte. Med fokus på god kommunikasjon sammen med våre kunder, skal vi gi kundene våre akkurat det de ønsker og har behov for.</p>
-      <p>Vi programmerer nettsidene ved bruk av HTML, CSS og JavaScript. Er det noe som er uklart, du ønsker å vite mer eller vil gjøre en avtale? Da er det bare å kontakte oss!</p>
-      <button id="omOssKontakt">Kontakt oss</button>
+        <h2>Litt om oss</h2>
+        <img src="./Bilder/pexels-fauxels-3183197.jpg" alt="flere personer som sitter rundt et bord, sett ovenifra" height="100%" width="100%">
+        <p>Vi er en nystartet bedrift som spesialiserer oss på nettsideutvikling. Hvis du ønsker en bedriftsnettside, kan vi hjelpe deg! Vi har som mål å tilby profesjonell, effektiv og sikker nettsideutvikling. Vi fokuserer på god kommunikasjon med kundene våre, slik at vi kan levere akkurat det de ønsker og har behov for.</p>
+        <h6>Vi utvikler alle nettsider fra bunnen av, uten maler, kun personlige og profesjonelle løsninger.</h6>
+        <button id="omOssKontakt">Kontakt oss</button>
     </div>
 
-    
-
-<!-- Tilbud -->
-    <div id="fire"></div>
+    <!-- Tilbud -->
     <div id="tilbud">
-      <img src="Bilder/deal.jpg" alt="Tilbud bilde">
-      <div>
-        <h2>Tilbud</h2>
-        <p>Tilbudene her er bare for å sette en pekepinn på ca. pris. Hvis du er interessert, er det bare å si ifra, så skal vi gi deg et personlig tilpasset tilbud for deg og din bedrift.</p>
-        <ul>
-          <li>Opp til 3 sider -> 5000,-</li>
-          <li>Opp til 5 sider -> 7000,-</li>
-          <li>Opp til 10 sider -> 12 000,-</li>
-        </ul>
-      </div>
+        <img src="./Bilder/pexels-olly-3778235.jpg" alt="en mann i dress som viser tommel opp" height="100%" width="100%">
+        <h3>Ta kontakt med oss for et godt tilbud</h3>
+        <button id="tilbudKontakt">Kontakt oss</button>
     </div>
 
-    
-
-<!-- Kontakt oss -->
+    <!-- Kontakt oss -->
     <div id="fem"></div>
     <div id="kontaktOss">
-      <h2>Kontakt oss</h2>
-      <p>Hvis du lurer på noe som helst, eller er interessert i en avtale, er det bare å bruke kontaktinformasjonen til å kontakte oss.</p>
-      <ul>
-        <li>E-post: m.bergerhaug@gmail.com</li>
-        <li>Eller mld. til tlf: +47 41 54 48 34</li>
-      </ul>
-        <p>© 2024 Bergerhaugs IT-tjenester - Organisasjonsnummer: 933 842 045</p>
+        <h2>Kontakt oss her:</h2>
+        <p>Hvis du har spørsmål eller ønsker en avtale, bruk kontaktinformasjonen nedenfor.</p>
+        <ul>
+            <li>E-post: m.bergerhaug@gmail.com</li>
+            <li>Tlf(melding): 41 54 48 34</li>
+        </ul>
     </div>
-
-    
+    <div id="org">
+        <p>Org. nr. 933 842 045 </p>
+    </div>
 </body>
 </html>
