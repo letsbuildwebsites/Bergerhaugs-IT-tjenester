@@ -1,413 +1,437 @@
-/* Stilen for hele siden */
-html, body {
-  margin: 0; /* Fjerner marginen rundt siden */
-  padding: 0; /* Fjerner padding rundt siden */
-  width: 100%; /* Setter bredden til 100% av skjermen */
-  height: 100%; /* Setter høyden til 100% av skjermen */
-  background-color: #212025; /* Setter bakgrunnsfargen til mørkegrå */
+/* Import Google Font for h1 */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+/* Global styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F7F9FB; /* Varm hvit farge */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Meny-stilen */
+/* Generell stil for alle knapper */
+button {
+    background-color: #1665d3; /* Mørkeblå */
+    color: #FFFFFF; /* Hvit tekst */
+    border: none;
+    padding: 12px 25px; /* Justert padding for større klikk-område */
+    font-size: 18px;
+    font-weight: 600; /* Gir teksten en fyldigere look */
+    border-radius: 8px; /* Myke hjørner */
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.4s ease, box-shadow 0.5s ease;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Subtil skygge for dybde */
+}
+
+button:hover {
+    background-color: #FFD700; /* Gullfarget hover-effekt */
+    color: #1F3A60; /* Endre tekstfarge for kontrast */
+    transform: translateY(-3px); /* Løfter knappen litt ved hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Forsterket skygge */
+}
+
+button:active {
+    transform: translateY(0); /* Tilbakestiller posisjon når knappen trykkes ned */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tilbakestiller skygge */
+}
+
+#toppTekst button, #omOss button, #tilbud button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; /* Tilpasser skriftstørrelsen for hver seksjon */
+}
+
+/* Kontaktknapper (eventuelle spesialtilpassede knapper) */
+#toppTekst button, #omOss button, #tilbud button {
+    background-color: #1F3A60; /* Samme farge for konsistent stil */
+}
+
+#toppTekst button:hover, #omOss button:hover, #tilbud button:hover {
+    background-color: #FFD700;
+    color: #1F3A60;
+}
+
+
+/* Header/Meny */
 #meny {
-  position: fixed; /* Fikser menyen til toppen av skjermen */
-  top: 0%; /* Plasserer menyen på toppen av skjermen */
-  left: 0%; /* Plasserer menyen på venstre side av skjermen */
-  width: 100%; /* Setter menyens bredde til full skjerm */
-  background-color: transparent; /* Setter menyens bakgrunn til gjennomsiktig */
-  padding: 10px; /* Legger til litt padding for å gjøre menyen mer leselig */
-  display: flex; /* Gjør menyen til en flex-container */
-    justify-content: center;
-    background-color: #212025;
-  z-index: 10;
+    background-color: #1F3A60; /* Mørkeblå */
+    color: #FFFFFF;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 3; /* Sørger for at menyen alltid ligger over andre elementer */
+    position: relative;
+}
+
+#meny h1 {
+    padding-right: 50px;;
 }
 
 #meny ul {
-  list-style: none; /* Fjerner punktene fra meny-elementene */
-  margin: 0; /* Fjerner margen fra meny-elementene */
-    padding: 10px;
-
-  display: inline-block; /* Gjør meny-elementene til inline-block-elementer */
+    list-style-type: none;
+    padding: 0;
 }
 
-#meny button {
-  background: none; /* Fjerner standard knapp bakgrunn */
-    font-size: medium;
-  border: none; /* Fjerner standard knapp ramme */
-  color: #fff; /* Setter tekstfargen til hvit */
-  text-decoration: none; /* Fjerner tekstdekoren fra meny-elementene */
-  padding: 10px; /* Legger til litt padding for å gjøre meny-elementene mer leselige */
-    border-radius: 30px;
-  cursor: pointer; /* Endrer musepekeren til en hånd når man er over knappene */
+#meny ul li {
+    display: inline-block;
+    margin-right: 20px;
 }
 
-#meny button:hover {
-  border: 2px solid #00ff00; /* Setter en lysegrønn ramme rundt knappen ved hover */
-  color: #00ff00; /* Endrer tekstfargen til lysegrønn ved hover */
-    padding: 8px;
-      transform: scale(1.2); /* Øker størrelsen på boksen ved hover */
-  transition: transform 0.5s, color 0.5s; /* Legger til en overgangseffekt for skalering og fargeendring */
+#meny ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 18px;
 }
 
+#meny ul li a h1 {
+    font-size: 30px;
+    font-weight: 600;
+}
 
-/* Stil for toppTekst og h1 */
+#meny ul li a:hover {
+    color: #FFD700; /* Gullfarget hover-effekt */
+}
+
+/* ToppTekst */
 #toppTekst {
-    position: relative;
-    top: 20%;
-    left: 5%;
-    color: #ffffff;
-    z-index: 2;
-}
-
-/* Stil for toppTekst og h1 */
-#toppTekst {
-  position: relative;
-  top: 20%;
-  left: 5%;
-  color: #ffffff;
-  z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 2; /* Sørger for at teksten vises over bildet */
 }
 
 #toppTekst h1 {
-  width: 50%;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Legger til skygge bak teksten */
-  background: rgba(255, 255, 255, 0.1); /* Legger til en semi-gjennomsiktig hvit bakgrunn */
-  backdrop-filter: blur(10px); /* Gjør bakgrunnen blurry */
-  padding: 10px; /* Legger til litt padding rundt teksten */
-  border-radius: 10px; /* Gjør hjørnene på bakgrunnen runde */
+    font-size: 36px;
+    font-weight: 700;
+    background-color: rgba(31, 58, 96, 0.7); /* Gjennomsiktig mørkeblå bakgrunn */
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
-/* Stil for brødteksten */
-body p {
-  font-size: 20px; /* Øker størrelsen på brødteksten */
-  color: #ffffff; /* Setter tekstfargen til hvit */
-}
-
-
-/* Stil for knappene i toppTekst */
 #toppTekst button {
-    background-color: #555; /* Bakgrunnsfarge for knappene når de ikke blir hovret over */
-    color: #fff; /* Setter tekstfargen til hvit */
-    text-decoration: none; /* Fjerner tekstdekoren fra knappene */
-    padding: 10px; /* Legger til litt padding for å gjøre knappene mer leselige */
-    cursor: pointer; /* Endrer musepekeren til en hånd når man er over knappene */
-    border-radius: 20px; /* Gjør knappene avrundede */
-    margin: 5px; /* Legger til litt margin mellom knappene */
-    font-size: medium;
-    border: 2px solid #212025;
+    background-color: #1F3A60;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 #toppTekst button:hover {
-    border: 2px solid #00ff00; /* Setter en lysegrønn ramme rundt knappen ved hover */
-    color: #00ff00; /* Endrer tekstfargen til lysegrønn ved hover */
-  transform: scale(1.2); /* Øker størrelsen på boksen ved hover */
-  transition: transform 0.5s, color 0.5s; /* Legger til en overgangseffekt for skalering og fargeendring */
+    background-color: #FFD700;
 }
 
-/* Stil for bilde */
+/* Bilder med overlegg av tekst */
 #bilde1 {
-    z-index: 0;
     position: relative;
-    top: -90px;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
 }
 
-#ikoner {
-  display: flex; /* Gjør #ikoner til en flex-container */
-  justify-content: space-between; /* Fordeler ikonene jevnt på linje */
-  padding: 20px; /* Legger til litt padding for å gjøre ikonene mer leselige */
-  position: absolute;
-  top: 110%;
-  background-color: #212025; /* Endret bakgrunnsfargen til mørkegrå */
+#bilde1 img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
-.ikon {
-  display: flex; /* Gjør hver .ikon til en flex-container */
-  flex-direction: column; /* Gjør ikonene til en kolonne */
-  align-items: center; /* Plasserer ikonene i midten */
-  padding: 20px; /* Legger til litt padding for å gjøre ikonene mer leselige */
-  background-color: #2e2e33; /* Setter bakgrunnsfargen til mørk grå */
-  border: 2px solid #ddd; /* Setter en lys grå border rundt ikonene */
-  border-radius: 25px; /* Runder av hjørnene på ikonene */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Legger til en skygge under ikonene */
-  color: white; /* Endrer tekstfargen til hvit */
-  opacity: 0; /* Setter opacity til 0 for å gjøre ikonene usynlige */
-  transform: translateX(-100px); /* Flytter ikonene 100px til venstre */
-  transition: opacity 1.5s, transform 1.5s; /* Legger til en transition-effekt */
+#bilde1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Mørkt filter over bildet for bedre kontrast til tekst */
+    z-index: 1;
 }
 
-
-.ikon.animate-in {
-  opacity: 1; /* Setter opacity til 1 for å gjøre ikonene synlige */
-  transform: translateX(0); /* Flytter ikonene tilbake til original posisjon */
-}
-
-.ikon img {
-  width: 100px; /* Setter bredde på ikon-bildene */
-  height: 100px; /* Setter høyde på ikon-bildene */
-  margin-bottom: 10px; /* Legger til litt margin under ikon-bildene */
-}
-
-.ikon h4 {
-  font-size: 26px; /* Setter font-størrelse på ikon-overskriftene */
-  margin-bottom: 10px; /* Legger til litt margin under ikon-overskriftene */
-}
-
-.ikon p {
-  font-size: 20px; /* Setter font-størrelse på ikon-teksten */
-  margin-bottom: 20px; /* Legger til litt margin under ikon-teksten */
+/* Trenger du seksjonen */
+#trengerdu {
+    padding: 40px;
+    background-color: #FFFFFF;
     text-align: center;
 }
 
-
-.ikon:hover {
-  color: #00ff00; /* Endrer tekstfargen til lysegrønn ved hover */
-  transform: scale(1.1); /* Øker størrelsen på boksen ved hover */
-  transition: transform 0.3s, color 0.3s; /* Legger til en overgangseffekt for skalering og fargeendring */
+#trengerdu h3 {
+    color: #1F3A60;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-
-.ikon {
-  /* ... andre styles ... */
-  opacity: 0; /* Setter opacity til 0 for å gjøre ikonene usynlige */
-  transform: translateX(-100px); /* Flytter ikonene 100px til venstre */
-  transition: opacity 1.5s, transform 1.5s; /* Legger til en transition-effekt */
+#trengerdu p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-
-
-#to {
-    position: absolute;
-    top: 101%;
-}
-
-/*  Reklame, 100% fornøyd garanti  */
+/* Reklame */
 #reklame {
-  background-color: #212025; /* Endret bakgrunnsfargen til mørkegrå */
-  position: absolute;
-  top: 145%;
-  width: 80%;
-  left: 5%;
-  padding: 3%;
-  opacity: 0;
-  transform: translateX(100%) rotate(90deg) scale(0.5);
-  transition: opacity 1.5s, transform 1.5s; /* Legger til en transition-effekt */
-  color: white; /* Endrer tekstfargen til hvit */
-}
-
-#reklame > p {
-  width: 40%;
-}
-
-#video {
-  position: absolute;
-  top: 10%;
-  left: 20%;
-}
-
-#reklame:hover {
-  color: #00ff00; /* Endrer tekstfargen til lysegrønn ved hover */
-}
-
-#reklame {
-    border-top: 5px solid #000000;
-  background-color: #212025; /* Endret bakgrunnsfargen til mørkegrå */
-  position: absolute;
-  top: 160%;
-  width: 90%;
-  left: 5%;
-  padding: 3%;
-  color: white; /* Endrer tekstfargen til hvit */
+    padding: 40px;
+    background-color: #F0F4F8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
 }
 
 #reklame h3 {
-  color: #00ff00; 
+    color: #1F3A60;
+    font-size: 26px;
+    flex-basis: 100%;
 }
 
 #reklame p {
-  color: white; /* Endrer tekstfargen på paragrafen til hvit */
+    font-size: 22px;
+    flex-basis: 50%;
 }
 
-
-#tre {
-    position: absolute;
-    top: 200%;
+#reklame img {
+    width: 45%;
+    height: auto;
+    border-radius: 10px;
 }
 
-
-/*  Om oss  */
+/* Om oss */
 #omOss {
-  position: absolute;
-  top: 200%;
-  width: 90%;
-  justify-content: center;
-  padding: 5%;
-  background-color: #212025; /* Endret bakgrunnsfargen til mørkegrå */
-  color: white; /* Endret tekstfargen til hvit */
-  opacity: 0;
-  transition: opacity 3.4s; /* Add transition effect */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center; /* Sentraliserer teksten */
-  border-radius: 10px;
+    background-color: #FFFFFF;
+    padding: 50px;
+    text-align: center;
+    position: relative;
 }
 
 #omOss h2 {
-  color: #00ff00; 
-  margin-bottom: 20px;
+    color: #1F3A60;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#omOss p, #omOss h6 {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 #omOss img {
-  width: 50%; /* Endret bredden på bildet til 50% */
-  height: auto; /* Bevarer bildeforholdet */
-  margin-bottom: 20px;
-  border-radius: 10px; /* Gjør hjørnene på bildet runde */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Legger til en skygge under bildet */
-}
-
-#omOss p {
-  color: white; /* Endret tekstfargen til hvit */
-  margin-bottom: 20px;
-  width: 80%; /* Begrens bredden på paragrafene */
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 #omOss button {
-  background-color: #00ff00; /* Endret bakgrunnsfargen på knappen til lysegrønn */
-  color: #212025; /* Endret tekstfargen på knappen til mørkegrå */
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-    border-radius: 15px;
+    background-color: #1F3A60;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 #omOss button:hover {
-  transform: scale(1.5); /* Øker størrelsen på boksen ved hover */
-  transition: transform 1s, color 1s; /* Legger til en overgangseffekt for skalering og fargeendring */
+    background-color: #FFD700;
 }
 
-
-
-#fire {
-    position: absolute;
-    top: 278%;
-}
-
-
-/*  Tilbud  */
+/* Tilbud */
 #tilbud {
-  position: absolute;
-  top: 310%;
-  width: 90%;
-  justify-content: center;
-  padding: 5%;
-  background-color: #212025; /* Endret bakgrunnsfargen til mørkegrå */
-  color: white; /* Endret tekstfargen til hvit */
-  opacity: 0;
-  transform: scale(0.01);
-  transition: opacity 4s, transform 4s;   
-  display: flex;
-  flex-direction: row; /* Bruker radlayout for bilde og tekst */
-  align-items: center;
-  border-radius: 10px;
-  gap: 20px;  /* Legger til mellomrom mellom bilde og tekst */
-}
-
-#tilbud h2 {
-  color: #00ff00; 
-  margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 0;
 }
 
 #tilbud img {
-  width: 30%; /* Endret bredden på bildet til 30% */
-    margin-left: 200px;
-  height: auto; /* Bevarer bildeforholdet */
-  border-radius: 10px; /* Gjør hjørnene på bildet runde */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Legger til en skygge under bildet */
-}
-
-#tilbud p, #tilbud ul {
-  width: 60%; /* Begrens bredden på teksten og listen */
-  margin-bottom: 20px;
-  text-align: left; /* Venstrejusterer teksten */
-}
-
-#tilbud ul {
-  list-style-type: none; /* Fjerner standard listepunkt */
-  padding-left: 0; /* Fjerner standard innrykk */
-}
-
-#tilbud ul:hover {
-  color: #00ff00; /* Endrer tekstfargen til lysegrønn ved hover */
-  transform: scale(1.1); /* Øker størrelsen på boksen ved hover */
-  transition: transform 0.3s, color 0.3s; /* Legger til en overgangseffekt for skalering og fargeendring */
-}
-
-#tilbud ul li {
-  margin-bottom: 10px;
-  background-color: #2e2e33; /* Bakgrunnsfarge for listeelementer */
-  padding: 10px;
-  border-radius: 5px;
-    border: 2px solid #000;
-    border-radius: 15px;
-}
-
-
-
-#fem {
-    position: absolute;
-    top: 360%;
-    border-top: 5px solid #000;
     width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    opacity: 0.9;
 }
 
+#tilbud h3 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    background-color: rgba(31, 58, 96, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
 
+#tilbud button {
+    background-color: #FFD700;
+    color: #1F3A60;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-/*  Kontakt oss  */
+#tilbud button:hover {
+    background-color: #1F3A60;
+    color: white;
+}
 
+/* Kontakt Oss */
 #kontaktOss {
-  position: absolute;
-  top: 370%;
-  width: 90%;
-  justify-content: center;
-  padding: 5%;
-  background-color: #212025; /* Endret bakgrunnsfargen til mørkegrå */
-  color: white; /* Endret tekstfargen til hvit */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center; /* Sentraliserer teksten */
+    padding: 40px;
+    background-color: #FFFFFF;
+    text-align: center;
 }
 
 #kontaktOss h2 {
-  color: #00ff00; 
-  margin-bottom: 20px;
+    color: #1F3A60;
+    font-size: 30px;
 }
 
-#kontaktOss p {
-  color: white; 
-  margin-bottom: 20px;
-  width: 80%; /* Begrens bredden på paragrafene */
+#kontaktOss p, #kontaktOss ul {
+    font-size: 18px;
 }
 
 #kontaktOss ul {
-  list-style-type: none; /* Fjerner standard listepunkt */
-  padding-left: 0; /* Fjerner standard innrykk */
-  width: 40%; /* Begrens bredden på listen */
+    list-style-type: none;
+    padding: 0;
 }
 
 #kontaktOss ul li {
-  margin-bottom: 10px;
-  background-color: #2e2e33; /* Bakgrunnsfarge for listeelementer */
-  padding: 10px;
-  border-radius: 5px;
-  color: #00ff00; /* Endrer tekstfargen til lysegrønn ved hover */
-    border: 2px solid #000;
+    margin-bottom: 10px;
 }
 
-#kontaktOss ul li:hover {
-  color: #00ff00; /* Endrer tekstfargen til lysegrønn ved hover */
-  transform: scale(1.5); /* Øker størrelsen på boksen ved hover */
-  transition: transform 1s, color 1s; /* Legger til en overgangseffekt for skalering og fargeendring */
+#kontaktOss p {
+    margin-top: 20px;
+    color: #666;
 }
 
+/* Footer */
+#kontaktOss p {
+    font-size: 14px;
+    color: #777;
+}
+
+#org {
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    list-style: none;
+}
+
+#org p {
+    margin-bottom: 5px;
+    font-size: 16px; 
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    /* Mobiltilpasning */
+    #meny {
+        padding: 10px 0; /* Reduserer padding for mobil */
+    }
+
+    #meny ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #toppTekst {
+        top: 70%; /* Flytter teksten litt ned i mobilvisning */
+        padding: 0 20px; /* Legger til litt padding for mobil */
+    }
+
+    #toppTekst h1 {
+        font-size: 24px; /* Mindre tekststørrelse i mobilvisning */
+    }
+
+    #toppTekst button {
+        font-size: 16px;
+    }
+
+    #trengerdu h3 {
+        font-size: 22px;
+    }
+
+    #reklame h3 {
+        font-size: 22px;
+    }
+
+    #reklame img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #omOss h2 {
+        font-size: 28px;
+    }
+
+    #tilbud h3 {
+        font-size: 22px;
+    }
+
+    #tilbud button {
+        margin-top: 30px;
+        font-size: 16px;
+    }
+
+    #kontaktOss h2 {
+        font-size: 26px;
+    }
+}
+
+/* Media Queries for tablets (e.g., iPad) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Tilpasning for iPad og lignende nettbrett */
+    #meny {
+        padding: 15px 0; /* Justerer padding for iPad */
+    }
+
+    #toppTekst {
+        top: 60%; /* Flytter teksten ned tilpasset for nettbrett */
+        padding: 0 30px; /* Mer padding for nettbrett */
+    }
+
+    #toppTekst h1 {
+        font-size: 30px; /* Større tekststørrelse for nettbrett */
+    }
+
+    #toppTekst button {
+        font-size: 18px;
+    }
+
+    #trengerdu h3 {
+        font-size: 24px;
+    }
+
+    #reklame h3 {
+        font-size: 24px;
+    }
+
+    #reklame img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #omOss h2 {
+        font-size: 30px;
+    }
+
+    #tilbud h3 {
+        font-size: 24px;
+    }
+
+    #tilbud button {
+        font-size: 18px;
+    }
+
+    #kontaktOss h2 {
+        font-size: 28px;
+    }
+}
