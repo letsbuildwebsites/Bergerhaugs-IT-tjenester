@@ -63,10 +63,6 @@ button:active {
     position: relative;
 }
 
-#meny h1 {
-    padding-right: 50px;;
-}
-
 #meny ul {
     list-style-type: none;
     padding: 0;
@@ -185,11 +181,13 @@ button:active {
     color: #1F3A60;
     font-size: 26px;
     flex-basis: 100%;
+    text-align: center;
 }
 
 #reklame p {
     font-size: 22px;
     flex-basis: 50%;
+    text-align: center;
 }
 
 #reklame img {
@@ -331,7 +329,7 @@ button:active {
 }
 
 /* Media Queries for responsiveness */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 568px) {
     /* Mobiltilpasning */
     #meny {
         padding: 10px 0; /* Reduserer padding for mobil */
